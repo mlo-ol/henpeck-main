@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Priority and Penalties | Henpeck</title>
+    <link rel="stylesheet" type="text/css" href="styles/settings.css">
+    <link rel="stylesheet" type="text/css" href="styles/priority-penalty.css">
+
+    <!-- to connect sidebar-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#sidebar-placeholder").load("sidebar.html")
+            $("#settings-header-placeholder").load("settings-header.html")
+        })
+    </script>
+
+    <!-- Google Fonts stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="maingrid">
+    <!-- Sidebar -->
+    <div id="side">
+        <div id="sidebar-placeholder"></div>
+    </div>
+    <!-- Main content -->
+    <div id="main">
+        <div id="settings">
+            <div id="settings-header">
+                <div id="settings-header-placeholder"></div>
+            </div>                    
+            <div id="settings-body">
+                <div id="location-description">
+                    This is the Priority and Penalties settings page where you can set priority levels and penalties.
+                </div>
+                <div class="setting-container">
+                    <div class="column">
+                        <div class="row-title">Priority Levels</div>
+                        <div class="priority-list">
+                            <div class="priority-row">P1</div>
+                            <div class="priority-row">P2</div>
+                            <div class="priority-row">P3</div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="row-title">Penalties</div>
+                        <div class="penalty-list">
+                            <div class="penalty-row">
+                                <select>
+                                    <option value="annoying-reminders">Annoying Reminders</option>
+                                    <option value="website-blocking">Website Blocking</option>
+                                    <option value="notify-partner">Notify Partner</option>
+                                </select>
+                            </div>
+                            <div class="penalty-row">
+                                <select>
+                                    <option value="annoying-reminders">Annoying Reminders</option>
+                                    <option value="website-blocking">Website Blocking</option>
+                                    <option value="notify-partner">Notify Partner</option>
+                                </select>
+                            </div>
+                            <div class="penalty-row">
+                                <select>
+                                    <option value="annoying-reminders">Annoying Reminders</option>
+                                    <option value="website-blocking">Website Blocking</option>
+                                    <option value="notify-partner">Notify Partner</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="rows">
+                    <a href="#" class="row-title">
+                        ANNOYING REMINDERS
+                    </a>
+                    <div id="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim.
+                    </div>
+                    <a href="#" class="row-title">
+                        WEBSITE BLOCKING
+                    </a>
+                    <div id="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim.
+                    </div>
+                    <a href="#" class="row-title">
+                        NOTIFY PARTNER
+                    </a>
+                    <div id="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

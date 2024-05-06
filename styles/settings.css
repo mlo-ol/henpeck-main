@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#maingrid > #side {
+    grid-area: side;
+    grid-column: col-start / span 3;
+    grid-row: 1 / span 12;
+}
+
+#maingrid > #main {
+    grid-area: cont;
+    grid-column: col-start 4 / span 9;
+    grid-row: 1 / span 12;
+}
+
+#maingrid {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    gap: 10px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#settings {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: stretch;
+    width: 100%;
+    height: 100%;
+    color: #7d5a50;
+}
+
+#settings-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    color:#7d5a50;
+    margin-bottom: 1%;
+}
+
+#settings-header #title {
+    font-family: "Amarante", sans-serif;
+    font-size: 3em;
+    text-align: start;
+    margin-top: 3.5%;
+    padding-left: 2.5%;
+}
+
+#settings-header #options {
+    font-family:"Nunito", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 1.25em;
+    text-align: start;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding-bottom: 1%;
+    border-bottom: 3px solid #a8a8a8;
+}
+
+#settings a {
+    text-decoration: none;
+    color: #7d5a50;
+}
+
+#settings-header #options .option {
+    border-radius: 60px;
+    align-self: center;
+    padding: 0.5% 1%;
+    display: inline-block;
+    width: fit-content;
+}
+
+.option:hover {
+    background-color: #f7e5bc;
+    cursor: pointer;
+}
+
+#settings-header #first {
+    padding-top: 1%;
+    padding-left: 2.5%;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.75em;
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 10px;
+    letter-spacing: 0.25em;
+    
+}
+
+#settings-header #first #path {
+    grid-column: 1 / span 9;
+    display: inline-content;
+    height: fit-content;
+}
+
+#settings-header #first #path .location {
+    width: fit-content;
+    display: inline-block;
+    line-height: 1;
+}
+
+#settings-header #first #path .location:hover {
+    color: #c29f6d;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+#settings-body {
+    padding: 2.5%;
+}
+
+#description {
+    font-family: "Nunito", sans-serif;
+    font-size: 1em;
+    text-align: start;
+    padding-bottom: 2%;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+#location-description{
+    font-family: "Nunito", sans-serif;
+    font-size: 1em;
+    text-align: start;
+    padding-bottom: 2%;
+    border-bottom: 1px solid #a8a8a8;
+    padding-top: 3%;
+
+}
+
+#settings-body #rows {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#settings-body #rows .row-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    width: fit-content;
+}
+
+#settings-body #rows .row-title:hover {
+    color: #c29f6d;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+

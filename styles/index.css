@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#maingrid > #side {
+    grid-area: side;
+    grid-column: col-start / span 3;
+    grid-row: 1 / span 12;
+}
+
+#maingrid > #main {
+    grid-area: cont;
+    grid-column: col-start 4 / span 9;
+    grid-row: 1 / span 12;
+}
+
+#maingrid {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    gap: 10px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: stretch;
+    width: 100%;
+    height: 100%;
+    color: #7d5a50;
+}
+
+#dashboard #title {
+    font-family: "Amarante", sans-serif;
+    font-size: 3em;
+    text-align: start;
+    margin-top: 3.5%;
+    padding-left: 2.5%;
+}
+
+#dashboard #description {
+    font-family: "Nunito", sans-serif;
+    font-size: 1em;
+    text-align: start;
+    padding-left: 2.5%;
+}
+
+#overview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin-top: 3%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
+    gap: 20px;
+}
+
+#overview #card {
+    text-align: center;
+    border: 1px solid #7d5a50;
+}
+
+#overview #card p {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 1.25em;
+    padding: 7% 4% 0% 4%;
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+
+#overview #card h1 {
+    font-family: "Amarante", sans-serif;
+    font-size: 5em;
+    font-weight: 700;
+    padding: 0% 7% 4% 7%;
+    margin: 0;
+    text-shadow: #c29f6d;
+}
+
+#pending {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+#pending header {
+    font-family: "Nunito", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 1%;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+#pending #tasks {
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #dbdbdb;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.task .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Nunito", sans-serif;
+    text-align: start;
+    padding-left: 2.5%;
+}
+
+.task .title p {
+    color: #8a8a8a;
+    font-size: 0.75em;
+}
+
+.task .tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    padding-right: 2.5%;
+    color: #7d5a50;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    column-gap: 6px;
+}
+
+.task .tags .priority {
+    font-size: 0.75em;
+    background-color: #dbdbdb;
+    border: 1px solid #dbdbdb;
+    border-radius: 60px;
+    padding: 1% 2%;
+}
+
+.task .tags .yellow {
+    font-size: 0.75em;
+    background-color: #f0cd81;
+    border: 1px solid #f0cd81;
+    border-radius: 60px;
+    padding: 1% 2%;
+}
+
+.task .tags .red {
+    font-size: 0.75em;
+    background-color: #d96a5d;
+    border: 1px solid #d96a5d;
+    border-radius: 60px;
+    padding: 1% 2%;
+}
+
+.task .tags .progress {
+    font-size: 0.75em;
+    border: 1px solid #7d5a50;
+    border-radius: 60px;
+    padding: 1% 2%;
+}
+
+/*
+#maingrid {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: "side cont"
+                         "side cont"
+                         "side cont";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+  }
+*/

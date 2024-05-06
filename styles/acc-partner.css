@@ -1,0 +1,228 @@
+/* acc-partner.css */
+
+#location-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#location-description button#add-partner-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#location-description button#add-partner-btn:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    margin: 0 auto; /* Center the table horizontally */
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center; /* Center align table content */
+}
+
+thead th {
+    background-color: #f0cd81;
+    color: #7d5a50;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+tbody td {
+    font-family: "Nunito", sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+tbody td:last-child {
+    text-align: center;
+}
+
+button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* acc-partner.css */
+
+/* Add Partner Popup Styles */
+#add-partner-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#add-partner-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#add-partner-form input[type="text"],
+#add-partner-form input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#add-partner-form button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#add-partner-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#add-partner-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#add-partner-form button[type="button"] {
+    background-color: #f0cd81;
+    color: #7d5a50;
+}
+
+#add-partner-form button[type="button"]:hover {
+    background-color: #e0bb61;
+}
+
+/* Verify Contact Details Popup Styles */
+#verify-contact-details-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#verify-contact-details-popup .popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    max-width: 500px;
+}
+
+#verify-contact-details-popup .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#verify-contact-details-popup .close:hover,
+#verify-contact-details-popup .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#verify-contact-details-popup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#verify-contact-details-popup input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#verify-contact-details-popup button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#verify-contact-details-popup button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#verify-contact-details-popup button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#verify-contact-details-popup button[type="button"] {
+    background-color: #f0cd81;
+    color: #7d5a50;
+}
+
+#verify-contact-details-popup button[type="button"]:hover {
+    background-color: #e0bb61;
+}

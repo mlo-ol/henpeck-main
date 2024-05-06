@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Home | Henpeck</title>
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
+
+        <!-- to connect sidebar-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#sidebar-placeholder").load("sidebar.html")
+            })
+        </script>
+
+        <!-- Google Fonts stylesheets -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="maingrid">
+            <!-- Sidebar -->
+            <div id="side">
+                <div id="sidebar-placeholder"></div>
+            </div>
+
+            <!-- Main content -->
+            <div id="main">
+                Main
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Profile Settings | Henpeck</title>
+    <link rel="stylesheet" type="text/css" href="styles/settings.css">
+    <link rel="stylesheet" type="text/css" href="styles/profile.css">
+
+    <!-- to connect sidebar-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#sidebar-placeholder").load("sidebar.html")
+            $("#settings-header-placeholder").load("settings-header.html")
+        })
+    </script>
+
+    <!-- Google Fonts stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="maingrid">
+    <!-- Sidebar -->
+    <div id="side">
+        <div id="sidebar-placeholder"></div>
+    </div>
+    <!-- Main content -->
+    <div id="main">
+        <div id="settings">
+            <div id="settings-header">
+                <div id="settings-header-placeholder"></div>
+            </div>                    
+            <div id="settings-body">
+                <div id="location-description">
+                    This is the profile settings page where you can update your profile details.
+                </div>
+
+                <div class="setting-container">
+                    <div class="form-column">
+                        <div class="row-header">Profile Details</div>
+                        <form id="profile-form">
+                            <label for="username" class="row-title">Username:</label>
+                            <input type="text" id="username" name="username"><br><br>
+                            <label for="contact-number" class="row-title">Contact Number:</label>
+                            <input type="text" id="contact-number" name="contact-number"><br><br>
+                            <label for="email" class="row-title">Email Address:</label>
+                            <input type="email" id="email" name="email"><br><br>
+                        </form>
+                    </div>
+                    <div class="button-column">
+                        <button type="button" id="save-profile">Save</button>
+                    </div>
+                </div>
+                
+                <div class="setting-container">
+                    <div class="form-column">
+                        <div class="row-header">Change password</div>
+                        <form id="profile-form">
+                            <label for="username" class="row-title">old password:</label>
+                            <input type="text" id="username" name="username"><br><br>
+                            <label for="contact-number" class="row-title">new password:</label>
+                            <input type="text" id="contact-number" name="contact-number"><br><br>
+                            <label for="email" class="row-title">confirm password:</label>
+                            <input type="email" id="email" name="email"><br><br>
+                        </form>
+                    </div>
+                    <div class="button-column">
+                        <button type="button" id="save-profile">Save</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

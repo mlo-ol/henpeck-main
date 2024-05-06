@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Home | Henpeck</title>
+        <link rel="stylesheet" type="text/css" href="styles/sidebar.css">
+
+        <script>
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+            });
+            }
+        </script>
+
+        <!-- Google Fonts stylesheets -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amarante&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="sidebar-grid">
+            <header>
+                <a href="index.html"><img src = "images/logo.png" alt="Henpeck Logo" width = 60px height = 60px>
+                HENPECK</a>
+            </header>
+            <nav>
+                <a href="index.html"><h1>DASHBOARD</h1></a>
+                <button class="dropdown-btn">
+                    PROJECTS
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="projects-container">
+                    <a href="project1.html">PROJECT 1</a><br>
+                    <a href="#">PROJECT 2</a><br>
+                    <a href="#" id="ADD">+</a>
+                </div>
+            </nav>
+            <footer>
+                <a href="settings-general.html"><h3>SETTINGS</h3></a>
+                <a href="#"></a><h3>LOGOUT</h3></a>
+            </footer>
+        </div>
+    </body>
+</html>

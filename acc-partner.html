@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Accountability Partners | Henpeck</title>
+    <link rel="stylesheet" type="text/css" href="styles/settings.css">
+    <link rel="stylesheet" type="text/css" href="styles/acc-partner.css">
+
+    <!-- to connect sidebar-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#sidebar-placeholder").load("sidebar.html")
+            $("#settings-header-placeholder").load("settings-header.html")
+        });
+
+        // Function to show the "Add Partner" popup
+        function showAddPartnerPopup() {
+            $("#add-partner-popup").fadeIn();
+        }
+
+        // Function to hide the "Add Partner" popup
+        function hideAddPartnerPopup() {
+            $("#add-partner-popup").fadeOut();
+        }
+
+        // Function to show the "Verify Contact Details" popup
+        function showVerifyContactDetailsPopup() {
+            // Check if the form is complete
+            if (isFormComplete()) {
+                $("#verify-contact-details-popup").fadeIn();
+                hideAddPartnerPopup(); // Hide "Add Partner" popup when showing verification popup
+            } else {
+                alert("Please fill out all fields before proceeding.");
+            }
+        }
+
+        // Function to hide the "Verify Contact Details" popup
+        function hideVerifyContactDetailsPopup() {
+            $("#verify-contact-details-popup").fadeOut();
+        }
+
+        // Function to check if the form is complete
+        function isFormComplete() {
+            var name = $("#name").val();
+            var contactNumber = $("#contact-number").val();
+            var email = $("#email").val();
+            return (name && contactNumber && email);
+        }
+
+        // Function to handle form submission for verifying contact details
+        function verifyContactDetails() {
+            var emailVerificationCode = $("#email-verification-code").val();
+            var smsVerificationCode = $("#sms-verification-code").val();
+
+            // Check if verification codes are valid
+            if (emailVerificationCode === "1" && smsVerificationCode === "1") {
+                // Add entry to table
+                addPartnerEntry();
+                hideVerifyContactDetailsPopup();
+            } else {
+                // Show error message
+                $("#verification-error-message").fadeIn();
+            }
+        }
+
+        // Function to add entry to table
+        function addPartnerEntry() {
+            // Retrieve form values
+            var name = $("#name").val();
+            var contactNumber = $("#contact-number").val();
+            var email = $("#email").val();
+
+            // Generate unique ID for new entry (you can use your own method here)
+            var id = Math.floor(Math.random() * 1000);
+
+            // Append new row to table
+            $("tbody").append("<tr><td>" + id + "</td><td>" + name + "</td><td>" + contactNumber + "</td><td>" + email + "</td><td><button>Delete</button></td></tr>");
+        }
+    </script>
+
+    <!-- Google Fonts stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="maingrid">
+    <!-- Sidebar -->
+    <div id="side">
+        <div id="sidebar-placeholder"></div>
+    </div>
+    <!-- Main content -->
+    <div id="main">
+        <div id="settings">
+            <div id="settings-header">
+                <div id="settings-header-placeholder"></div>
+            </div>                    
+            <div id="settings-body">
+                <div id="location-description">
+                    <span>This is the accountability partners page where you can manage your accountability partners.</span>
+                    <button id="add-partner-btn" onclick="showAddPartnerPopup()">Add</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Contact Number</th>
+                                <th>Email Address</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Placeholder rows -->
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>123-456-7890</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>987-654-3210</td>
+                                <td>jane@example.com</td>
+                                <td>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Partner Popup -->
+<div id="add-partner-popup">
+    <div class="popup-content">
+        <span class="close" onclick="hideAddPartnerPopup()">&times;</span>
+        <h2>Add New Partner</h2>
+        <form id="add-partner-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="contact-number">Contact Number:</label>
+            <input type="text" id="contact-number" name="contact-number" required><br><br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <button type="button" onclick="hideAddPartnerPopup()">Cancel</button>
+            <button type="button" onclick="showVerifyContactDetailsPopup()">Next</button>
+        </form>
+    </div>
+</div>
+
+<!-- Verify Contact Details Popup -->
+<div id="verify-contact-details-popup">
+    <div class="popup-content">
+        <span class="close" onclick="hideVerifyContactDetailsPopup()">&times;</span>
+        <h2>Verify Contact Details</h2>
+        <p>A verification code has been sent to the email and contact number provided.</p>
+        <form id="verify-contact-details-form" onsubmit="verifyContactDetails(); return false;">
+            <label for="email-verification-code">Email Verification Code:</label>
+            <input type="text" id="email-verification-code" name="email-verification-code" required><br><br>
+            <label for="sms-verification-code">SMS Verification Code:</label>
+            <input type="text" id="sms-verification-code" name="sms-verification-code" required><br><br>
+            <button type="button" onclick="hideVerifyContactDetailsPopup()">Cancel</button>
+            <button type="submit">Save</button>
+        </form>
+        <div id="verification-error-message" style="display: none; color: red; margin-top: 10px;">Invalid verification codes. Please try again.</div>
+    </div>
+</div>
+
+</body>
+</html>
