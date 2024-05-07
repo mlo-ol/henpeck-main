@@ -1,0 +1,49 @@
+/* ann-reminders.css */
+
+.reminder-container {
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 2%;
+}
+
+.row-header {
+    text-transform: uppercase;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.row-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+}
+
+.column {
+    flex: 1;
+}
+
+.row-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%; /* Take up full width of container */
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+    .row-content {
+        flex-direction: column;
+    }
+}

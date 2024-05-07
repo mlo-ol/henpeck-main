@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Reminders | Henpeck</title>
+    <link rel="stylesheet" type="text/css" href="styles/settings.css">
+    <link rel="stylesheet" type="text/css" href="styles/ann-reminders.css">
+
+    <!-- to connect sidebar-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#sidebar-placeholder").load("sidebar.html")
+            $("#settings-header-placeholder").load("settings-header.html")
+        });
+    </script>
+
+    <!-- Google Fonts stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="maingrid">
+        <!-- Sidebar -->
+        <div id="side">
+            <div id="sidebar-placeholder"></div>
+        </div>
+        <!-- Main content -->
+        <div id="main">
+            <div id="settings">
+                <div id="settings-header">
+                    <div id="settings-header-placeholder"></div>
+                </div>                    
+                <div id="settings-body">
+                    <div id="location-description">
+                        <span>This is the annual reminders page where you can set up reminders for yearly events.</span>
+                    </div>
+                    <div class="reminder-container">
+                        <div class="row-header">Soft Deadline</div>
+                            <span>This is the annual reminders page where you can set up reminders for yearly events.</span>
+                        <div class="row-content">
+                            <div class="column">
+                                <div class="row-title">Repeat:</div>
+                                <div class="row-title">Interval:</div>
+                                <div class="row-title">Ringtone:</div>
+                            </div>
+                            <div class="column">
+                                <select>
+                                    <option value="daily">5 times</option>
+                                    <option value="weekly">10 times</option>
+                                    <option value="monthly">15 times</option>
+                                </select>
+                                <select>
+                                    <option value="1">1 minute</option>
+                                    <option value="2">3 minutes</option>
+                                    <option value="3">5 minutes</option>
+                                    <option value="3">10 minutes</option>
+                                </select>
+                                <select>
+                                    <option value="ringtone1">Ringtone 1</option>
+                                    <option value="ringtone2">Ringtone 2</option>
+                                    <option value="ringtone3">Ringtone 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reminder-container">
+                        <div class="row-header">Hard Deadline</div>
+                            <span>This is the annual reminders page where you can set up reminders for yearly events.</span>
+                        <div class="row-content">
+                            <div class="column">
+                                <div class="row-title">Repeat:</div>
+                                <div class="row-title">Interval:</div>
+                                <div class="row-title">Ringtone:</div>
+                            </div>
+                            <div class="column">
+                                <select>
+                                    <option value="daily">5 times</option>
+                                    <option value="weekly">10 times</option>
+                                    <option value="monthly">15 times</option>
+                                </select>
+                                <select>
+                                    <option value="1">1 minute</option>
+                                    <option value="2">3 minutes</option>
+                                    <option value="3">5 minutes</option>
+                                    <option value="3">10 minutes</option>
+                                </select>
+                                <select>
+                                    <option value="ringtone1">Ringtone 1</option>
+                                    <option value="ringtone2">Ringtone 2</option>
+                                    <option value="ringtone3">Ringtone 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

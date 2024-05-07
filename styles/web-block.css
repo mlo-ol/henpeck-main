@@ -1,0 +1,104 @@
+/* web-block.css */
+
+/* Styles for web block container */
+.web-block-container {
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 2%;
+}
+
+/* Styles for row header */
+.row-header {
+    text-transform: uppercase;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    width: fit-content;
+}
+
+/* Styles for row title */
+.row-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.05em;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+}
+
+/* Styles for description */
+.description {
+    margin-bottom: 10px;
+    font-family: "Nunito", sans-serif;
+    font-size: 1em;
+}
+
+/* Styles for remove button */
+.remove-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    float: right; /* Align to the right */
+}
+
+.remove-button:hover {
+    background-color: #c82333;
+}
+
+/* Styles for website URL input */
+#website-url {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 70%;
+}
+
+/* Styles for add button */
+#location-description button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#location-description button:hover {
+    background-color: #0056b3;
+}
+
+.blocked-website-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.blocked-website-row .row-title {
+    font-weight: bold;
+}
+
+.blocked-website-row .description {
+    font-style: italic;
+}
+
+.blocked-website-row .remove-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

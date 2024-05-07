@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Notify Partner | Henpeck</title>
+    <link rel="stylesheet" type="text/css" href="styles/settings.css">
+    <link rel="stylesheet" type="text/css" href="styles/notify-partner.css">
+
+    <!-- to connect sidebar-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#sidebar-placeholder").load("sidebar.html")
+            $("#settings-header-placeholder").load("settings-header.html")
+        })
+    </script>
+
+    <!-- Google Fonts stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="maingrid">
+    <!-- Sidebar -->
+    <div id="side">
+        <div id="sidebar-placeholder"></div>
+    </div>
+    <!-- Main content -->
+    <div id="main">
+        <div id="settings">
+            <div id="settings-header">
+                <div id="settings-header-placeholder"></div>
+            </div>                    
+            <div id="settings-body">
+                <div id="location-description">
+                    This is the notification settings page where you can manage how your partner receives notifications.
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Notification</th>
+                                <th>Communication Channel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Creation of Project<br><span class="desc">Hello, This person has selected you as an accountability partner of this project</span></td>
+                                <td>
+                                    <label class="label-left">Email</label>
+                                    <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+                                    <label class="label-right">SMS</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Completion of Task<br><span class="desc">Hello, This person has completed a task</span></td>
+                                <td>
+                                    <label class="label-left">Email</label>
+                                    <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+                                    <label class="label-right">SMS</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Missed Task Deadline<br><span class="desc">Hello, This person has missed a task deadline</span></td>
+                                <td>
+                                    <label class="label-left">Email</label>
+                                    <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+                                    <label class="label-right">SMS</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Due Date Progress Tracking<br><span class="desc">Hello, This person has made progress towards the due date of a task</span></td>
+                                <td>
+                                    <label class="label-left">Email</label>
+                                    <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+                                    <label class="label-right">SMS</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Near Deadline Pressure<br><span class="desc">Hello, This person has a task approaching its due date</span></td>
+                                <td>
+                                    <label class="label-left">Email</label>
+                                    <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+                                    <label class="label-right">SMS</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

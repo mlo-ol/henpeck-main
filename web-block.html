@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Block | Henpeck</title>
+    <link rel="stylesheet" type="text/css" href="styles/settings.css">
+    <link rel="stylesheet" type="text/css" href="styles/web-block.css">
+
+    <!-- to connect sidebar-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#sidebar-placeholder").load("sidebar.html")
+            $("#settings-header-placeholder").load("settings-header.html")
+            
+            // Add functionality for add button
+            $("#add-website-btn").click(function() {
+                var websiteUrl = $("#website-url").val();
+                if (websiteUrl.trim() !== "") {
+                    // Extract website name from URL
+                    var websiteName = websiteUrl.replace(/^https?:\/\//,'').replace(/\/.*$/,'');
+                    var newRow = '<div class="blocked-website-row">' +
+                        '<div class="row-title">' + websiteName + '</div>' +
+                        '<div class="description">' + websiteUrl + '</div>' +
+                        '<button class="remove-button">Remove</button>' +
+                        '</div>';
+                    $("#blocked-websites").append(newRow);
+                    $("#website-url").val("");
+                } else {
+                    alert("Please enter a website URL.");
+                }
+            });
+
+            // Add functionality for remove button
+            $(document).on("click", ".remove-button", function() {
+                $(this).parent().remove();
+            });
+        });
+    </script>
+
+    <!-- Google Fonts stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="maingrid">
+        <!-- Sidebar -->
+        <div id="side">
+            <div id="sidebar-placeholder"></div>
+        </div>
+        <!-- Main content -->
+        <div id="main">
+            <div id="settings">
+                <div id="settings-header">
+                    <div id="settings-header-placeholder"></div>
+                </div>                    
+                <div id="settings-body">
+                    <div id="location-description">
+                        <span>This is the annual reminders page where you can set up reminders for yearly events.</span>
+                    </div>
+                    <div class="web-block-container">
+                        <div class="row-header">Blocked Websites</div>
+                        <div id="location-description">
+                            <span>Enter the URL of the website:</span>
+                            <input type="text" id="website-url" placeholder="Enter URL...">
+                            <button id="add-website-btn">Add</button>
+                        </div>
+                        <div id="blocked-websites">
+                            <!-- Example row -->
+                            <div class="blocked-website-row">
+                                <div class="row-title">Facebook</div>
+                                <div class="description">www.facebook.com</div>
+                                <button class="remove-button">Remove</button>
+                            </div>
+                            <!-- Example row -->
+                            <div class="blocked-website-row">
+                                <div class="row-title">Twitter</div>
+                                <div class="description">www.twitter.com</div>
+                                <button class="remove-button">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
